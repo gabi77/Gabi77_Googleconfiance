@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * @category   Gabi77
+ * @package    Gabi77_Googleconfiance
+ * @copyright  Copyright (c) 2014 Gabi77 (http://www.gabi77.com)
+ * @author     Gabriel Janez <contact@gabi77.com>
+ * @license    http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ */
+ -->
+<config>
+    <modules>
+        <Gabi77_Googleconfiance>
+            <version>1.0.0</version>
+        </Gabi77_Googleconfiance>
+    </modules>
+    <global>
+        <helpers>
+            <googleconfiance>
+                <class>Gabi77_Googleconfiance_Helper</class>
+            </googleconfiance>
+        </helpers>
+        <models>
+            <googleconfiance>
+                <class>Gabi77_Googleconfiance_Model</class>
+            </googleconfiance>
+        </models>
+    </global>
+    <frontend>
+        <routers>
+            <gabi77googleconfiance>
+                <use>standard</use>
+                <args>
+                    <module>Gabi77_Googleconfiance</module>
+                    <frontName>googleconfiance</frontName>
+                </args>
+            </gabi77googleconfiance>
+        </routers>
+        <layout>
+            <updates>
+                <gabi77googleconfiance>
+                    <file>gabi77googleconfiance.xml</file>
+                </gabi77googleconfiance>
+            </updates>
+        </layout>
+		<translate>
+            <modules>
+                <Gabi77_Googleconfiance>
+                    <files>
+                        <default>Gabi77_Googleconfiance.csv</default>
+                    </files>
+                </Gabi77_Googleconfiance>
+            </modules>
+        </translate>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <googleconfiance translate="title" module="googleconfiance">
+                                            <title>Google Confiance</title>
+                                        </googleconfiance>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+	<translate>
+            <modules>
+                <Gabi77_Googleconfiance>
+                    <files>
+                        <default>Gabi77_Googleconfiance.csv</default>
+                    </files>
+                </Gabi77_Googleconfiance>
+            </modules>
+        </translate>
+    </adminhtml>
+    <default>
+        <googleconfiance>
+        	<general_settings>
+                <general_enabled>0</general_enabled>
+                <general_google_domain>www.gabi77.com</general_google_domain>
+                <general_google_trusted_store_id>000000</general_google_trusted_store_id>
+                <general_google_merchant_subid>000000</general_google_merchant_subid>
+                <general_google_country>FR</general_google_country>
+                <general_google_page_lang>fr_FR</general_google_page_lang>
+                <general_google_product_lang>fr</general_google_product_lang>
+                <general_google_type>ID</general_google_type>
+            </general_settings> 
+        </googleconfiance>
+    </default>
+</config>
